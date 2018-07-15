@@ -55,8 +55,32 @@ nav .button {
     margin-top: 30px;
 }
 
+#menu_btn {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+#menu.reveal {
+    display: block;
+}
+
 #auth_todo {
     background-color: #be3844;
     color: #fff;
     display: none;
+}
+
+@media (max-width: 800px) {
+    #menu {
+        display: none;
+    }
+    .wide-input {
+        width: 100%;
+    }
+}
+
+@media (min-width: 800px) {
+    #menu_btn {
+        display: none;
+    }
 }

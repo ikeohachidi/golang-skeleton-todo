@@ -129,7 +129,6 @@ func AuthMiddleware(w http.ResponseWriter, r *http.Request, next http.HandlerFun
 	if err == nil && token.Valid {
 		// Create context to send username to other handlers after authentictaion
 		context.Set(r, "username", UserCred.Username)
-		log.Print(UserCred.Username)
 		next(w, r)
 	} else {
 		w.WriteHeader(http.StatusUnauthorized)
