@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Choc Todo</title>
+</head>
+<body>
+    <div class="row">
+        <nav class="container">
+            <span style="font-size: 120%">Choc Todo</span>
+            <div>
+                <a href="/" class="button">Home</a>
+                <a href="/todo" class="button">Todos</a>
+                <a href="/signup" class="button">CREATE ACCOUNT</a>
+                <a href="/login" class="button button-primary">SIGN IN</a>
+                <button class="button" id="logout">LOGOUT</button>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="container center-text">
+            <h2>CREATE ACCOUNT</h2>
+            <form action="/register" method="POST">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" class="wide-input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="wide-input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="wide-input">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" name="confirmpassword" id="confirmpassword" class="wide-input"> <br>
+                <input type="submit" class="button button-primary" value="LOGIN">
+            </form>
+        </div>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

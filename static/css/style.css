@@ -1,0 +1,56 @@
+.center-text {
+    text-align: center;
+}
+
+.wide-input {
+    width: 48%;
+}
+
+nav>div {
+    float: right;
+    display: table
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+#list_todo li {
+    border: 1px solid #bbb;
+    padding: 5px 20px;
+    border-radius: 4px;
+    list-style-type: none;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#list_todo button {
+    margin-bottom: 0px;
+}
+.button-x {
+    color: #414141;
+    padding: 10px 14px;
+    line-height: 0px;
+    border: none;
+}
+
+.row:first-of-type {
+    border-bottom: 2px solid #33C3F0;
+}
+
+nav > span {
+    margin: 4px 0;
+    display: inline-block;
+}
+
+nav .button {
+    padding: 0px 15px;
+    margin: 0px 0px;
+    border-radius: 0px;
+    border: none;
+}
+
+.row:last-of-type {
+    margin-top: 30px;
+}
