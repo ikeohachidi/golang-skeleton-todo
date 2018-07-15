@@ -26,9 +26,7 @@ var views = map[string]string{
 }
 
 // Secret is the secret
-var Secret = []byte("chocdeveloperSecret")
-var jwttoken string
-var authUsername string
+var Secret = []byte("Your Secret")
 
 func toJSON(c interface{}) []byte {
 	marshal, _ := json.Marshal(c)
