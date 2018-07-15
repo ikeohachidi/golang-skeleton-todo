@@ -1,5 +1,4 @@
 let login = document.getElementById("login")
-let logout = document.getElementById("logout")
 let form = document.getElementsByTagName("form")[0]
 
 login.addEventListener("click", function(e) {
@@ -19,7 +18,6 @@ login.addEventListener("click", function(e) {
             let auth = JSON.parse(req.responseText)
             localStorage.setItem("username", auth.Username)
             localStorage.setItem("access_token", auth.Token)
-            console.log(auth)
             window.location.href = `/todo`
         }
         req.onerror = function() {

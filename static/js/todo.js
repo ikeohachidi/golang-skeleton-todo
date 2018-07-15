@@ -2,6 +2,7 @@ let tasks = document.getElementsByClassName("task")
 let addTodo = document.getElementById("add_todo")
 let listTodo = document.getElementById("list_todo")
 let todoField = document.getElementById("add_todo_field")
+let authTodo = document.getElementById("auth_todo")
 
 let tasksList = []
 
@@ -9,9 +10,6 @@ let user = {
     username: localStorage.getItem("username"),
     token: localStorage.getItem("access_token")
 }
-
-console.log(user)
-
 
 // Fetch all of the users todos
 let req = new XMLHttpRequest()
@@ -73,7 +71,6 @@ addTodo.addEventListener("click", (e) => {
         listTodo.appendChild(li)
 
         for (let x of tasks) {
-            // tasksList.push(`${x.innerHTML}+chocdeveloper`)
             if (x.textContent == addTask) {
                 tasksList.push(x.textContent)
             } else {
@@ -119,4 +116,10 @@ function deleteTodo(btn) {
         req.send(JSON.stringify(user))
         tasksList = []
     })
+}
+
+if (user.username == null && user.token == null) {
+    authTodo.style.display = "block";
+    todoField.style.display = "none"
+    addTodo.textContent = "Really Just sign in"
 }

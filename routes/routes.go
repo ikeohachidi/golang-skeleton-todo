@@ -26,7 +26,7 @@ var views = map[string]string{
 }
 
 // Secret is the secret
-var Secret = []byte("Your Secret")
+var Secret = []byte("Lorem Ipsum")
 
 func toJSON(c interface{}) []byte {
 	marshal, _ := json.Marshal(c)
@@ -85,6 +85,7 @@ func AuthenticateHandler(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			log.Println(err)
 		}
+		log.Println(tokenString)
 		w.Write(toJSON(&Credentials{Username: user.Username, Token: tokenString}))
 	}
 }
